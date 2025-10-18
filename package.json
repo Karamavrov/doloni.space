@@ -1,0 +1,19 @@
+{
+  "name": "doloni-space",
+  "version": "1.0.0",
+  "description": "Static website for Doloni Space",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": ["static-site", "github-pages"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "vite-plugin-handlebars": "^2.0.0"
+  }
+}
+
