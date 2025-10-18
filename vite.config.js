@@ -75,7 +75,7 @@ const pageData = {
 
 export default defineConfig({
   root: "src",
-  base: "/",
+  base: "/doloni.space/",
   publicDir: "../public",
   build: {
     outDir: "../dist",
