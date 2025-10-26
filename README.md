@@ -158,6 +158,7 @@ jobs:
 ### Додавання логотипу та зображень
 
 1. Покладіть файли в `public/images/`:
+
    - `logo.svg` або `logo.png` - логотип сайту
    - `favicon.png` або `favicon.ico` - favicon
    - Інші зображення
@@ -166,7 +167,7 @@ jobs:
 
 3. Використання в HTML:
    ```html
-   <img src="/images/logo.svg" alt="Logo">
+   <img src="/images/logo.svg" alt="Logo" />
    ```
 
 ### Зміна контенту
@@ -224,7 +225,7 @@ MIT License
 
 ## 📞 Контакти
 
-- Email: info@doloni.space
+- Email: doloni.space@gmail.com
 - Website: https://doloni.space
 
 ---

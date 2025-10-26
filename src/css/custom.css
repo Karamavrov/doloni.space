@@ -61,11 +61,8 @@ header h1 a:hover {
 }
 
 .site-logo {
-    transition: transform 0.2s ease;
-}
-
-.site-logo:hover {
-    transform: scale(1.05);
+    height: 50px;
+    width: auto;
 }
 
 /* Welcome page styles */
@@ -158,7 +155,7 @@ header h1 a:hover {
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    height: 100%;
 }
 
 .contact-card h3 {
@@ -169,6 +166,7 @@ header h1 a:hover {
     display: flex;
     align-items: start;
     margin-bottom: 1rem;
+    gap: 10px;
 }
 
 .contact-item-label {
@@ -223,9 +221,6 @@ header h1 a:hover {
         display: none !important;
     }
     
-    .site-logo {
-        display: none;
-    }
     
     .page-actions {
         display: none !important;

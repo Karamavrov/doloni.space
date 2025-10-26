@@ -30,7 +30,7 @@ const pageData = {
   "/contacts.html": {
     lang: "uk",
     title: "Контакти - Doloni Space",
-    description: "Контактна інформація Doloni Space.",
+    description: "Контакти Doloni Space.",
     canonical: "https://doloni.space/contacts.html",
     currentPage: "contacts",
   },
@@ -67,7 +67,7 @@ const pageData = {
   "/en/contacts.html": {
     lang: "en",
     title: "Contacts - Doloni Space",
-    description: "Contact information for Doloni Space.",
+    description: "Contacts of Doloni Space.",
     canonical: "https://doloni.space/en/contacts.html",
     currentPage: "contacts",
   },
