@@ -26,10 +26,10 @@
     <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body>
-    <header class="site-header text-white py-3 print-hide">
+    <header class="site-header py-3 print-hide">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
-                <a href="{{#if (eq lang 'en')}}/en/{{else}}/{{/if}}" class="text-white text-decoration-none d-flex align-items-center gap-2">
+                <a href="{{#if (eq lang 'en')}}/en/{{else}}/{{/if}}" class="text-decoration-none d-flex align-items-center gap-2">
                     <img src="/images/doloni_logo_header.svg" alt="Doloni Space" class="site-logo" >
                 </a>
                 <nav class="d-flex align-items-center gap-3">
@@ -37,11 +37,11 @@
                     <div class="lang-switcher">
                         {{#if (eq lang 'uk')}}
                             <span class="fw-bold">UA</span>
-                            <span class="text-white-50">|</span>
-                            <a href="{{#if (eq currentPage 'home')}}/en/{{else}}/en/{{currentPage}}{{/if}}" class="text-white text-decoration-none">EN</a>
+                            <span>|</span>
+                            <a href="{{#if (eq currentPage 'home')}}/en/{{else}}/en/{{currentPage}}{{/if}}" class="text-decoration-none">EN</a>
                         {{else}}
-                            <a href="{{#if (eq currentPage 'home')}}/{{else}}/{{currentPage}}{{/if}}" class="text-white text-decoration-none">UA</a>
-                            <span class="text-white-50">|</span>
+                            <a href="{{#if (eq currentPage 'home')}}/{{else}}/{{currentPage}}{{/if}}" class="text-decoration-none">UA</a>
+                            <span>|</span>
                             <span class="fw-bold">EN</span>
                         {{/if}}
                     </div>

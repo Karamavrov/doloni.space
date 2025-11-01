@@ -2,13 +2,22 @@
 
 :root {
     --primary-color: #5b3425;
-    --text-color: #212529;
+    --text-color: rgb(33, 37, 41);
     --border-color: #dee2e6;
+
+    --bs-primary-rgb:91, 52, 37;
     
     /* Override Bootstrap link colors */
     --bs-link-color: #5b3425;
     --bs-link-hover-color: #4a2a1f;
     --bs-link-color-rgb: 91, 52, 37;
+
+    --background-color-saturated: rgba(255, 255, 255, 0.7);
+    --background-color-light: rgba(255, 255, 255, 0.35);
+
+    --bs-info-text-emphasis: #212529;
+    --bs-info-bg-subtle: rgba(146, 141, 112, 0.3);
+    --bs-info-border-subtle: rgba(146, 141, 112, 0.6);
 }
 
 html {
@@ -22,15 +31,74 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    /* Background image */
+    background-image: url('/images/background-image-1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* Optional: Add a subtle overlay for better text readability if needed */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.15);
+    z-index: -1;
+}
+footer{
+    background-color: var(--background-color-saturated);
 }
 
 main {
     flex: 1;
+    margin-top: 100px; /* Account for fixed header height */
+    background-color: var(--background-color-saturated);
+    min-height: calc(100vh - 80px);
+    max-width: 900px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+main.container {
+    padding: 20px 40px 0;
 }
 
 /* Header styles */
 .site-header {
-    background-color: var(--primary-color) !important;
+    background-color: var(--background-color-saturated);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header link colors - use primary color */
+.site-header a {
+    color: var(--primary-color);
+}
+
+.site-header a:hover {
+    color: var(--bs-link-hover-color);
+    opacity: 0.9;
+}
+
+/* Language switcher styling */
+.site-header .lang-switcher span {
+    color: var(--primary-color);
+}
+
+.site-header .lang-switcher span:not(.fw-bold) {
+    opacity: 0.5;
 }
 
 header h1 a:hover {
@@ -73,25 +141,18 @@ header h1 a:hover {
 }
 
 .welcome-content {
-    max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
-/* Legal pages styles */
-.legal-page {
-    max-width: 900px;
-    margin: 0 auto;
-}
 
 .page-actions {
-    position: sticky;
-    top: 20px;
-    background: white;
+    background: var(--background-color-light);
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
+    z-index: 100; /* Stay below header but above content */
 }
 
 .btn-action {
@@ -100,7 +161,7 @@ header h1 a:hover {
 
 /* Table of Contents */
 .toc {
-    background: #f8f9fa;
+    background: var(--background-color-light);
     border-left: 4px solid var(--primary-color);
     padding: 1.5rem;
     margin-bottom: 2rem;
@@ -137,7 +198,6 @@ header h1 a:hover {
 }
 
 .content-section h2 {
-    color: var(--primary-color);
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
@@ -196,9 +256,16 @@ header h1 a:hover {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .page-actions {
-        position: static;
+    /* Keep background fixed on mobile for better UX */
+    body {
+        background-attachment: fixed;
     }
+    
+    /* Adjust padding for mobile header (usually smaller) */
+    main {
+        padding-top: 70px;
+    }
+    
     
     .btn-action {
         width: 100%;
@@ -221,6 +288,14 @@ header h1 a:hover {
         display: none !important;
     }
     
+    /* Reset header positioning for print */
+    .site-header {
+        position: static !important;
+    }
+    
+    main {
+        padding-top: 0 !important;
+    }
     
     .page-actions {
         display: none !important;
@@ -229,6 +304,12 @@ header h1 a:hover {
     body {
         font-size: 12pt;
         line-height: 1.5;
+        /* Remove background image for printing */
+        background-image: none !important;
+    }
+    
+    body::before {
+        display: none !important;
     }
     
     .content-section {
@@ -257,6 +338,11 @@ header h1 a:hover {
 /* Accessibility improvements */
 a:focus,
 button:focus {
+    outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
 }
