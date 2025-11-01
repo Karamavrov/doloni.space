@@ -27,24 +27,6 @@ function generateTOC() {
   });
 }
 
-// Print functionality
-function printPage() {
-  window.print();
-}
-
-// Download as PDF functionality (triggers browser's print dialog with Save as PDF option)
-function downloadPDF() {
-  // Show a helpful message
-  const lang = document.documentElement.lang;
-  const message =
-    lang === "uk"
-      ? 'У діалозі друку оберіть "Зберегти як PDF"'
-      : 'In the print dialog, select "Save as PDF"';
-
-  alert(message);
-  window.print();
-}
-
 // Smooth scrolling for anchor links
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -61,8 +43,34 @@ function initSmoothScroll() {
   });
 }
 
+// Handle redirect URL parameter
+function handleRedirectParam() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const redirectValue = urlParams.get("redirect");
+
+  // Check if redirect parameter is set to consumer-info
+  if (redirectValue === "consumer-info") {
+    const currentPath = window.location.pathname;
+
+    // Check if current page is already consumer-info
+    if (currentPath.includes("consumer-info")) {
+      return; // Already on consumer-info page, no redirect needed
+    }
+
+    // Determine language based on current path
+    const isEnglish = currentPath.startsWith("/en/");
+    const redirectPath = isEnglish ? "/en/consumer-info" : "/consumer-info";
+
+    // Redirect to consumer-info page
+    window.location.href = redirectPath;
+  }
+}
+
 // Initialize all functionality when DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {
+  // Handle redirect parameter (check before other operations)
+  handleRedirectParam();
+
   // Generate TOC for legal pages
   generateTOC();
 
@@ -72,13 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add print button functionality
   const printBtn = document.getElementById("print-btn");
   if (printBtn) {
-    printBtn.addEventListener("click", printPage);
-  }
-
-  // Add PDF download button functionality
-  const pdfBtn = document.getElementById("pdf-btn");
-  if (pdfBtn) {
-    pdfBtn.addEventListener("click", downloadPDF);
+    printBtn.addEventListener("click", () => window.print());
   }
 
   // Add fade-in animation to main content
@@ -87,6 +89,3 @@ document.addEventListener("DOMContentLoaded", function () {
     mainContent.classList.add("fade-in");
   }
 });
-
-// Export functions for potential external use
-export { printPage, downloadPDF, generateTOC };
