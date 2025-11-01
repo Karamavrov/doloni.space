@@ -1,5 +1,70 @@
 /* Custom styles for Doloni Space */
 
+/* Font Face Declarations */
+@font-face {
+    font-family: 'Foco';
+    src: url('/fonts/foco/Foco_W_Rg.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Foco';
+    src: url('/fonts/foco/Foco_W_Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Foco';
+    src: url('/fonts/foco/Foco_W_It.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Foco';
+    src: url('/fonts/foco/Foco_W_BdIt.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KoHo';
+    src: url('/fonts/koho/KoHo-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KoHo';
+    src: url('/fonts/koho/KoHo-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KoHo';
+    src: url('/fonts/koho/KoHo-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KoHo';
+    src: url('/fonts/koho/KoHo-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
 :root {
     --primary-color: #5b3425;
     --text-color: rgb(33, 37, 41);
@@ -7,10 +72,16 @@
 
     --bs-primary-rgb:91, 52, 37;
     
+    /* Font families */
+    --font-foco: 'Foco', sans-serif;
+    --font-koho: 'KoHo', sans-serif;
+    
     /* Override Bootstrap link colors */
     --bs-link-color: #5b3425;
     --bs-link-hover-color: #4a2a1f;
+    
     --bs-link-color-rgb: 91, 52, 37;
+    --bs-link-hover-color-rgb: 72, 35, 20;
 
     --background-color-saturated: rgba(255, 255, 255, 0.7);
     --background-color-light: rgba(255, 255, 255, 0.35);
@@ -25,7 +96,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-foco), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
     min-height: 100%;
@@ -38,6 +109,11 @@ body {
     background-attachment: fixed;
     background-size: cover;
     position: relative;
+}
+
+/* Apply KoHo font for English version */
+html[lang="en"] body {
+    font-family: var(--font-koho), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Optional: Add a subtle overlay for better text readability if needed */
@@ -63,11 +139,10 @@ main {
     max-width: 900px;
     border-radius: 10px;
     margin-bottom: 20px;
-
 }
 
 main.container {
-    padding: 20px 40px 0;
+    padding: 20px 40px;
 }
 
 /* Header styles */
@@ -215,7 +290,6 @@ header h1 a:hover {
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     padding: 1.5rem;
-    height: 100%;
 }
 
 .contact-card h3 {
@@ -273,12 +347,20 @@ header h1 a:hover {
         margin-right: 0;
     }
     
-    .contact-item {
-        flex-direction: column;
+
+}
+
+
+@media (max-width: 576px) {
+    main.container {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px 20px;
     }
-    
-    .contact-item-label {
-        margin-bottom: 0.25rem;
+
+    .contact-card{
+        padding: 15px;
     }
 }
 
