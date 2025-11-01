@@ -97,6 +97,21 @@ export default defineConfig({
     outDir: "../dist",
     emptyOutDir: true,
     assetsDir: "assets",
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "src/index.html"),
+        privacy: resolve(__dirname, "src/privacy.html"),
+        terms: resolve(__dirname, "src/terms.html"),
+        contacts: resolve(__dirname, "src/contacts.html"),
+        "consumer-info": resolve(__dirname, "src/consumer-info.html"),
+        404: resolve(__dirname, "src/404.html"),
+        "en/index": resolve(__dirname, "src/en/index.html"),
+        "en/privacy": resolve(__dirname, "src/en/privacy.html"),
+        "en/terms": resolve(__dirname, "src/en/terms.html"),
+        "en/contacts": resolve(__dirname, "src/en/contacts.html"),
+        "en/consumer-info": resolve(__dirname, "src/en/consumer-info.html"),
+      },
+    },
   },
   plugins: [
     handlebars({
