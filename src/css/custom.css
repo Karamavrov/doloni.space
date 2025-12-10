@@ -151,7 +151,7 @@ main {
     flex: 1;
     margin-top: 100px; /* Account for fixed header height */
     background-color: var(--background-color-saturated);
-    min-height: calc(100vh - 80px);
+    /* min-height: calc(100vh - 80px); */
     max-width: 900px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -451,4 +451,24 @@ button:focus-visible {
     to {
         opacity: 1;
     }
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.instagram-link svg,
+.instagram-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.instagram-link:hover svg {
+    transform: scale(1.1);
 }
