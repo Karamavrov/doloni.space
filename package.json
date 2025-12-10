@@ -6,14 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{html,hbs,js,css}\"",
+    "format:check": "prettier --check \"src/**/*.{html,hbs,js,css}\""
   },
-  "keywords": ["static-site", "github-pages"],
+  "keywords": [
+    "static-site",
+    "github-pages"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "prettier": "^3.7.4",
     "vite": "^5.0.0",
     "vite-plugin-handlebars": "^2.0.0"
   }
 }
-

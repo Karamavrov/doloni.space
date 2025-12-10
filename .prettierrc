@@ -1,0 +1,33 @@
+{
+    "printWidth": 100,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "quoteProps": "as-needed",
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "endOfLine": "lf",
+    "htmlWhitespaceSensitivity": "css",
+    "htmlSelfClosingTags": false,
+    "overrides": [
+        {
+            "files": "*.hbs",
+            "options": {
+                "parser": "html",
+                "printWidth": 120,
+                "htmlWhitespaceSensitivity": "ignore",
+                "htmlSelfClosingTags": false
+            }
+        },
+        {
+            "files": "*.html",
+            "options": {
+                "printWidth": 120,
+                "htmlWhitespaceSensitivity": "ignore",
+                "htmlSelfClosingTags": false
+            }
+        }
+    ]
+}
