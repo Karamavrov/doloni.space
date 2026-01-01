@@ -156,10 +156,8 @@ main {
 }
 
 /* Override Bootstrap container max-width */
-@media (max-width: 1200px) {
-
-
-        .container {
+@media (min-width: 1200px) {
+    .container {
         max-width: 960px;
     }
 }
