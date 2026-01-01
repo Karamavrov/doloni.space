@@ -2,7 +2,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>Doloni Space</h5>
+                           <a
+                        href="{{#if (eq lang 'en')}}/en/{{else}}/{{/if}}"
+                        class="text-decoration-none d-flex align-items-center gap-2 mb-2"
+                    >
+                        <img src="/images/doloni_logo_header.svg" alt="Doloni" class="site-logo" />
+                    </a>
 
                     {{#if (eq lang 'uk')}}
                         <p class="text-muted small mb-1">Телефон: <a href="tel:+380771920374">+380 771920374</a></p>
@@ -42,7 +47,7 @@
                             <a href="/en/contacts" class="text-decoration-none me-3">Contacts</a>
                         {{/if}}
                     </nav>
-                    <p class="text-muted small">&copy; 2025 Doloni Space</p>
+                    <p class="text-muted small">&copy; 2025 Doloni</p>
                 </div>
             </div>
         </div>

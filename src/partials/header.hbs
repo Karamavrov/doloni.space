@@ -4,12 +4,32 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="{{description}}" />
+        {{#if (eq lang 'uk')}}
+        <!-- SEO Keywords for Ukrainian -->
+        <meta
+            name="keywords"
+            content="масаж, масаж Ірпінь, масажний салон Ірпінь, масаж Ірпень, масажний кабінет Ірпінь, релакс масаж, масаж спини, Doloni масаж, запис на масаж Ірпінь"
+        />
+        {{else}}
+        <!-- SEO Keywords for English -->
+        <meta
+            name="keywords"
+            content="massage, massage Irpin, massage salon Irpin, massage space Irpin, relaxation massage, Doloni, book massage Irpin, massage appointment Irpin"
+        />
+        {{/if}}
 
         <!-- Open Graph -->
         <meta property="og:title" content="{{title}}" />
         <meta property="og:description" content="{{description}}" />
         <meta property="og:url" content="{{canonical}}" />
         <meta property="og:type" content="website" />
+        {{#if (eq lang 'uk')}}
+        <meta property="og:locale" content="uk_UA" />
+        <meta property="og:site_name" content="Doloni • Масаж Ірпінь - Масажний простір" />
+        {{else}}
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Doloni • Massage Irpin - Massage Space" />
+        {{/if}}
 
         <!-- Canonical -->
         <link rel="canonical" href="{{canonical}}" />
@@ -82,7 +102,7 @@
                         href="{{#if (eq lang 'en')}}/en/{{else}}/{{/if}}"
                         class="text-decoration-none d-flex align-items-center gap-2"
                     >
-                        <img src="/images/doloni_logo_header.svg" alt="Doloni Space" class="site-logo" />
+                        <img src="/images/doloni_logo_header.svg" alt="Doloni" class="site-logo" />
                     </a>
                     <nav class="d-flex align-items-center gap-3">
                         <!-- Language Switcher -->

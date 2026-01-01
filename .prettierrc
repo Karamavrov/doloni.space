@@ -11,14 +11,15 @@
     "endOfLine": "lf",
     "htmlWhitespaceSensitivity": "css",
     "htmlSelfClosingTags": false,
+    "plugins": ["@prettier/plugin-handlebars"],
     "overrides": [
         {
             "files": "*.hbs",
             "options": {
-                "parser": "html",
+                "parser": "glimmer",
                 "printWidth": 120,
-                "htmlWhitespaceSensitivity": "ignore",
-                "htmlSelfClosingTags": false
+                "singleQuote": false,
+                "htmlWhitespaceSensitivity": "ignore"
             }
         },
         {

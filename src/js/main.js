@@ -1,5 +1,3 @@
-// Main JavaScript for Doloni Space
-
 // Generate Table of Contents from H2 headings
 function generateTOC() {
     const tocContainer = document.getElementById("toc-list");

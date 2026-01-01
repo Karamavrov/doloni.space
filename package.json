@@ -1,24 +1,25 @@
 {
-  "name": "doloni-space",
-  "version": "1.0.0",
-  "description": "Static website for Doloni Space",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "format": "prettier --write \"src/**/*.{html,hbs,js,css}\"",
-    "format:check": "prettier --check \"src/**/*.{html,hbs,js,css}\""
-  },
-  "keywords": [
-    "static-site",
-    "github-pages"
-  ],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "prettier": "^3.7.4",
-    "vite": "^5.0.0",
-    "vite-plugin-handlebars": "^2.0.0"
-  }
+    "name": "doloni-space",
+    "version": "1.0.0",
+    "description": "Static website for Doloni",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "format": "prettier --write \"src/**/*.{html,hbs,js,css}\"",
+        "format:check": "prettier --check \"src/**/*.{html,hbs,js,css}\""
+    },
+    "keywords": [
+        "static-site",
+        "github-pages"
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@prettier/plugin-handlebars": "^0.5.0",
+        "prettier": "^3.7.4",
+        "vite": "^5.0.0",
+        "vite-plugin-handlebars": "^2.0.0"
+    }
 }
