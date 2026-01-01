@@ -11,20 +11,21 @@ const pageData = {
         canonical: "https://doloni.space/",
         currentPage: "home",
     },
-    "/privacy.html": {
-        lang: "uk",
-        title: "Політика конфіденційності - Doloni",
-        description: "Політика конфіденційності Doloni. Інформація про обробку персональних даних.",
-        canonical: "https://doloni.space/privacy",
-        currentPage: "privacy",
-    },
-    "/terms.html": {
-        lang: "uk",
-        title: "Умови використання - Doloni",
-        description: "Умови використання сервісів масажного салону Doloni • Масаж Ірпінь в Ірпені.",
-        canonical: "https://doloni.space/terms",
-        currentPage: "terms",
-    },
+    // Legal pages temporarily removed - uncomment when ready:
+    // "/privacy.html": {
+    //     lang: "uk",
+    //     title: "Політика конфіденційності - Doloni",
+    //     description: "Політика конфіденційності Doloni. Інформація про обробку персональних даних.",
+    //     canonical: "https://doloni.space/privacy",
+    //     currentPage: "privacy",
+    // },
+    // "/terms.html": {
+    //     lang: "uk",
+    //     title: "Умови використання - Doloni",
+    //     description: "Умови використання сервісів масажного салону Doloni • Масаж Ірпінь в Ірпені.",
+    //     canonical: "https://doloni.space/terms",
+    //     currentPage: "terms",
+    // },
     "/contacts.html": {
         lang: "uk",
         title: "Контакти - Doloni",
@@ -56,20 +57,21 @@ const pageData = {
         canonical: "https://doloni.space/en/",
         currentPage: "home",
     },
-    "/en/privacy.html": {
-        lang: "en",
-        title: "Privacy Policy - Doloni",
-        description: "Privacy Policy of Doloni. Information about personal data processing.",
-        canonical: "https://doloni.space/en/privacy",
-        currentPage: "privacy",
-    },
-    "/en/terms.html": {
-        lang: "en",
-        title: "Terms of Service - Doloni • Масаж Ірпінь",
-        description: "Terms of Service for Doloni",
-        canonical: "https://doloni.space/en/terms",
-        currentPage: "terms",
-    },
+    // Legal pages temporarily removed - uncomment when ready:
+    // "/en/privacy.html": {
+    //     lang: "en",
+    //     title: "Privacy Policy - Doloni",
+    //     description: "Privacy Policy of Doloni. Information about personal data processing.",
+    //     canonical: "https://doloni.space/en/privacy",
+    //     currentPage: "privacy",
+    // },
+    // "/en/terms.html": {
+    //     lang: "en",
+    //     title: "Terms of Service - Doloni • Масаж Ірпінь",
+    //     description: "Terms of Service for Doloni",
+    //     canonical: "https://doloni.space/en/terms",
+    //     currentPage: "terms",
+    // },
     "/en/contacts.html": {
         lang: "en",
         title: "Contacts - Doloni",
@@ -97,14 +99,16 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "src/index.html"),
-                privacy: resolve(__dirname, "src/privacy.html"),
-                terms: resolve(__dirname, "src/terms.html"),
+                // Legal pages temporarily removed - uncomment when ready:
+                // privacy: resolve(__dirname, "src/privacy.html"),
+                // terms: resolve(__dirname, "src/terms.html"),
                 contacts: resolve(__dirname, "src/contacts.html"),
                 "consumer-info": resolve(__dirname, "src/consumer-info.html"),
                 404: resolve(__dirname, "src/404.html"),
                 "en/index": resolve(__dirname, "src/en/index.html"),
-                "en/privacy": resolve(__dirname, "src/en/privacy.html"),
-                "en/terms": resolve(__dirname, "src/en/terms.html"),
+                // Legal pages temporarily removed - uncomment when ready:
+                // "en/privacy": resolve(__dirname, "src/en/privacy.html"),
+                // "en/terms": resolve(__dirname, "src/en/terms.html"),
                 "en/contacts": resolve(__dirname, "src/en/contacts.html"),
                 "en/consumer-info": resolve(__dirname, "src/en/consumer-info.html"),
             },

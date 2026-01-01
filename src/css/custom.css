@@ -155,6 +155,17 @@ main {
     margin-bottom: 20px;
 }
 
+/* Override Bootstrap container max-width */
+@media (max-width: 1200px) {
+
+
+        .container {
+        max-width: 960px;
+    }
+}
+
+
+
 main.container {
     padding: 20px 40px;
 }
