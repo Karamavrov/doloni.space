@@ -91,29 +91,29 @@ npm run preview
 
 1. Зробіть білд проекту:
 
-    ```bash
-    npm run build
-    ```
+   ```bash
+   npm run build
+   ```
 
 2. Скопіюйте вміст папки `dist/` у корінь вашого GitHub Pages репозиторію
 
 3. Створіть файл `.nojekyll` у кореневій папці:
 
-    ```bash
-    touch .nojekyll
-    ```
+   ```bash
+   touch .nojekyll
+   ```
 
 4. Закомітьте та запушіть зміни:
 
-    ```bash
-    git add .
-    git commit -m "Deploy to GitHub Pages"
-    git push origin main
-    ```
+   ```bash
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin main
+   ```
 
 5. Увімкніть GitHub Pages у налаштуваннях репозиторію:
-    - Settings → Pages → Source: Deploy from a branch
-    - Branch: main, folder: / (root)
+   - Settings → Pages → Source: Deploy from a branch
+   - Branch: main, folder: / (root)
 
 ### Варіант 2: GitHub Actions (рекомендовано)
 
@@ -123,32 +123,32 @@ npm run preview
 name: Deploy to GitHub Pages
 
 on:
-    push:
-        branches: [main]
-    workflow_dispatch:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
-    build-and-deploy:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v3
-              with:
-                  node-version: "18"
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
 
-            - name: Install dependencies
-              run: npm install
+      - name: Install dependencies
+        run: npm install
 
-            - name: Build
-              run: npm run build
+      - name: Build
+        run: npm run build
 
-            - name: Deploy to GitHub Pages
-              uses: peaceiris/actions-gh-pages@v3
-              with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./dist
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
 ```
 
 Після пушу в `main` гілку, сайт автоматично деплоїться.
@@ -158,16 +158,16 @@ jobs:
 ### Додавання логотипу та зображень
 
 1. Покладіть файли в `public/images/`:
-    - `logo.svg` або `logo.png` - логотип сайту
-    - `favicon.png` або `favicon.ico` - favicon
-    - Інші зображення
+   - `logo.svg` або `logo.png` - логотип сайту
+   - `favicon.png` або `favicon.ico` - favicon
+   - Інші зображення
 
 2. Файли автоматично копіюються в `dist/images/` при білді
 
 3. Використання в HTML:
-    ```html
-    <img src="/images/logo.svg" alt="Logo" />
-    ```
+   ```html
+   <img src="/images/logo.svg" alt="Logo" />
+   ```
 
 ### Зміна контенту
 

@@ -1,67 +1,78 @@
-    <footer class="py-4 mt-2 print-hide">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                           <a
-                        href="{{#if (eq lang 'en')}}/en/{{else}}/{{/if}}"
-                        class="text-decoration-none d-flex align-items-center gap-2 mb-2"
-                    >
-                        <img src="/images/doloni_logo_header.svg" alt="Doloni" class="site-logo" />
-                    </a>
+<footer class="py-4 mt-2 print-hide">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <a
+          href="{{#if (eq lang 'en')}}/en/{{else}}/{{/if}}"
+          class="text-decoration-none d-flex align-items-center gap-2 mb-2"
+        >
+          <img src="/images/doloni_logo_header.svg" alt="Doloni" class="site-logo" />
+        </a>
 
-                    {{#if (eq lang 'uk')}}
-                        <p class="text-muted small mb-1">Телефон: <a href="tel:+380771920374">+380 771920374</a></p>
-                        <p class="text-muted small mb-1"><a href="https://maps.app.goo.gl/tXU8DCgrPyBjzGNy7" target="_blank">м. Ірпінь, Університетська 3/3</a></p>
-                    {{else}}
-                        <p class="text-muted small mb-1">Phone: <a href="tel:+380771920374">+380 771920374</a></p>
-                        <p class="text-muted small mb-1">
-                        <a href="https://maps.app.goo.gl/tXU8DCgrPyBjzGNy7" target="_blank">Irpin, Universitetska 3/3</a></p>
+        {{#if (eq lang 'uk')}}
+          <p class="text-muted small mb-1">
+            Телефон: <a href="tel:+380771920374">+380 771920374</a>
+          </p>
+          <p class="text-muted small mb-1">
+            <a href="https://maps.app.goo.gl/tXU8DCgrPyBjzGNy7" target="_blank" rel="noopener noreferrer">
+              м. Ірпінь, Університетська 3/3
+            </a>
+          </p>
+        {{else}}
+          <p class="text-muted small mb-1">
+            Phone: <a href="tel:+380771920374">+380 771920374</a>
+          </p>
+          <p class="text-muted small mb-1">
+            <a href="https://maps.app.goo.gl/tXU8DCgrPyBjzGNy7" target="_blank" rel="noopener noreferrer">
+              Irpin, Universitetska 3/3
+            </a>
+          </p>
+        {{/if}}
 
-                        
-                    {{/if}}
+        <p class="text-muted small">
+          <a
+            href="https://www.instagram.com/doloni.space/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="d-flex align-items-center gap-1"
+            aria-label="Instagram"
+          >
+            Instagram:
+            {{!-- {{> instagram-icon size="20" idSuffix="footer" class="instagram-icon-footer"}} --}}
+          </a>
+        </p>
+      </div>
 
-                    <p class="text-muted small">
-                            <a
-                            href="https://www.instagram.com/doloni.space/"  
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="d-flex align-items-center gap-1"
-                            aria-label="{{#if (eq lang 'uk')}}Instagram{{else}}Instagram{{/if}}"
-                        >
-                            Instagram:
-                      
-                            {{> instagram-icon size="20" idSuffix="footer" class="instagram-icon-footer"}}
-                        </a>
-                    </p>
-                    
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <nav class="mb-2">
-                        {{#if (eq lang 'uk')}}
-                            <!-- Legal pages temporarily removed - uncomment when ready:
-                            <a href="/privacy" class="text-decoration-none me-3">Політика конфіденційності</a>
-                            <a href="/terms" class="text-decoration-none me-3">Умови використання</a>
-                            -->
-                            <a href="/contacts" class="text-decoration-none me-3">Контакти</a>
-                        {{else}}
-                            <!-- Legal pages temporarily removed - uncomment when ready:
-                            <a href="/en/privacy" class="text-decoration-none me-3">Privacy Policy</a>
-                            <a href="/en/terms" class="text-decoration-none me-3">Terms of Service</a>
-                            -->
-                            <a href="/en/contacts" class="text-decoration-none me-3">Contacts</a>
-                        {{/if}}
-                    </nav>
-                    <p class="text-muted small">&copy; 2025 Doloni</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+      <div class="col-md-6 text-md-end">
+        <nav class="mb-2">
+          {{#if (eq lang 'uk')}}
+            {{!-- Legal pages temporarily removed - uncomment when ready:
+            <a href="/privacy" class="text-decoration-none me-3">Політика конфіденційності</a>
+            <a href="/terms" class="text-decoration-none me-3">Умови використання</a>
+            --}}
+            <a href="/contacts" class="text-decoration-none me-3">Контакти</a>
+          {{else}}
+            {{!-- Legal pages temporarily removed - uncomment when ready:
+            <a href="/en/privacy" class="text-decoration-none me-3">Privacy Policy</a>
+            <a href="/en/terms" class="text-decoration-none me-3">Terms of Service</a>
+            --}}
+            <a href="/en/contacts" class="text-decoration-none me-3">Contacts</a>
+          {{/if}}
+        </nav>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
-    <!-- Custom JS -->
-    <script type="module" src="/js/main.js"></script>
+        <p class="text-muted small">&copy; 2025 Doloni</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"
+></script>
+
+<script type="module" src="/js/main.js"></script>
+
 </body>
 </html>
-
