@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
-import { copyFileSync } from "fs";
 import handlebars from "vite-plugin-handlebars";
 
 const pageData = {
@@ -13,17 +12,17 @@ const pageData = {
   },
   "/privacy.html": {
     lang: "uk",
-    title: "Політика конфіденційності - Doloni",
+    title: "Публічний договір (оферта) - Doloni",
     description:
-      "Політика конфіденційності Doloni. Інформація про обробку персональних даних.",
+      "Публічний договір (оферта) Doloni. Інформація про обробку персональних даних.",
     canonical: "https://doloni.space/privacy",
     currentPage: "privacy",
   },
   "/terms.html": {
     lang: "uk",
-    title: "Умови використання - Doloni",
+    title: "Публічний договір (оферта) - Doloni",
     description:
-      "Умови використання сервісів масажного салону Doloni • Масаж Ірпінь в Ірпені.",
+      "Публічний договір (оферта) Doloni. Інформація про обробку персональних даних.",
     canonical: "https://doloni.space/terms",
     currentPage: "terms",
   },
@@ -60,16 +59,17 @@ const pageData = {
   },
   "/en/privacy.html": {
     lang: "en",
-    title: "Privacy Policy - Doloni",
+    title: "Public Offer Agreement - Doloni",
     description:
-      "Privacy Policy of Doloni. Information about personal data processing.",
+      "Public Offer Agreement of Doloni. Information about personal data processing.",
     canonical: "https://doloni.space/en/privacy",
     currentPage: "privacy",
   },
   "/en/terms.html": {
     lang: "en",
-    title: "Terms of Service - Doloni • Масаж Ірпінь",
-    description: "Terms of Service for Doloni",
+    title: "Public Offer Agreement - Doloni",
+    description:
+      "Public Offer Agreement of Doloni. Information about personal data processing.",
     canonical: "https://doloni.space/en/terms",
     currentPage: "terms",
   },
